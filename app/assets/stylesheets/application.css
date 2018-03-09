@@ -1,0 +1,63 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require bootstrap/dist/css/bootstrap.min
+ *= require_tree .
+ *= require_self
+ */
+ 
+ ul {
+  list-style:none;
+}
+
+
+body {
+background-color: #ffffff;
+}
+
+footer {
+background-color: #e3f2fd;
+}
+
+img {
+width:100%;
+max-width: 100%;
+height: auto;
+}
+
+.center {
+text-align: center;
+}
+
+/* ハンバーガーメニューにしない為のCSS*/
+
+.navbar-toggle {
+display: none;
+}
+.collapse {
+display: block;
+border-color:transparent;
+}
+/* navbar-leftの場合はここをleftに変える */
+.navbar-right {
+float: right;
+}
+.navbar-header {
+float: left;
+}
+.navbar-nav {
+margin:0 -15px 0 0;
+}
+.navbar-nav>li>a {
+padding-top: 15px;
+padding-bottom: 15px;
+}

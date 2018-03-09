@@ -1,0 +1,22 @@
+<div class="center">
+  <%= form_with(model: @twt, local: true,) do |form| %>
+    <% if @twt.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= @twt.errors.count %>件のエラーがあります。</h2>
+        <ul>
+
+        <% @twt.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <form>
+    <%= form.text_field :content %>
+  
+    <%= form.submit"つぶやく", :class => "btn btn-default" %>
+  </form>
+</div>
+
+<% end %>

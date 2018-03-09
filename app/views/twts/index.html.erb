@@ -1,0 +1,16 @@
+<div class="center">
+  <a class="index_header">つぶやき一覧</a>
+  <br>
+  <br>
+  <table align="center"; style="font-size: 15pt; line-height: 250%; ">
+      <% @twts.each do |twt| %>
+        <tr>
+          <td align="left"><%= twt.content %></td>
+        </tr>
+        
+          <td><%= link_to "編集", edit_twt_path(twt.id),class:"btn btn-primary btn-sm",data: { confirm: '本当に編集していいですか？' } %></td>
+          <td><%= link_to '削除', twt_path(twt.id),class:"btn btn-warning btn-sm", method: :delete,data: { confirm: '本当に削除していいですか？' } %></td>
+          
+    <% end %> 
+  </table>
+</div>
